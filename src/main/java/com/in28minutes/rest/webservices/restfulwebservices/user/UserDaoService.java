@@ -17,9 +17,9 @@ public class UserDaoService {
 		private static int postCount=0;
 		
 		static {
-			users.add(new User(1, "Adam", new Date(),new ArrayList<Post>()));
-			users.add(new User(2, "Evelin", new Date(),new ArrayList<Post>()));
-			users.add(new User(3, "Jack", new Date(),new ArrayList<Post>())); 
+			users.add(new User(1, "Adam", new Date()));
+			users.add(new User(2, "Evelin", new Date()));
+			users.add(new User(3, "Jack", new Date())); 
 			
 		}
 		
@@ -44,34 +44,34 @@ public class UserDaoService {
 			return null;
 		}
 		
-		public List<Post> getUserPosts(int idUser){
-		   User user = users.get(idUser);
-		   return user.getPosts();
-		}
+//		public List<Post> getUserPosts(int idUser){
+//		   User user = users.get(idUser);
+//		   return user.getPosts();
+//		}
 
-		public Post createUserPosts(int id, Post post) {
-			// TODO Auto-generated method stub
-			if(post.getIdPost() == null) {
-				post.setIdPost(++postCount);
-			}
-			post.setDateCreated(new Date());
-			User user = users.get(id);
-			user.getPosts().add(post);
-			return post;
-		}
+//		public Post createUserPosts(int id, Post post) {
+//			// TODO Auto-generated method stub
+//			if(post.getIdPost() == null) {
+//				post.setIdPost(++postCount);
+//			}
+//			post.setDateCreated(new Date());
+//			User user = users.get(id);
+//			user.getPosts().add(post);
+//			return post;
+//		}
 		
-		public Post getUserEspecificPost(int idUser, int idPost){
-			if(idUser<users.size()) {
-			   User user = users.get(idUser);
-			   List<Post> posts = user.getPosts();
-			   for (Post post : posts) {
-				if(post.getIdPost() == idPost) {
-					return post;
-				}
-			}
-			}
-			   return null;
-			}
+//		public Post getUserEspecificPost(int idUser, int idPost){
+//			if(idUser<users.size()) {
+//			   User user = users.get(idUser);
+//			   List<Post> posts = user.getPosts();
+//			   for (Post post : posts) {
+//				if(post.getIdPost() == idPost) {
+//					return post;
+//				}
+//			}
+//			}
+//			   return null;
+//			}
 		
 		public User deleteUser(int id) {
 			Iterator<User> iterator = users.iterator();

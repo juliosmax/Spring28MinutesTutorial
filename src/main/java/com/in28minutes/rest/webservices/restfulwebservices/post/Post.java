@@ -5,7 +5,7 @@ import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-
+//This post was my homework, later the teacher Mahendra will implement another post in the curse
 @Data
 public class Post {
 	
